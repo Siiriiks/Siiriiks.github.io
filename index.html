@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Website - Home</title>
+<style>
+
+hr.grey {
+	display: block;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 4px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+a.account {
+	float: right;
+	text-decoration: none;
+	padding: 13px;
+	color: #5B5B5B;
+}
+.active {
+	float: right;
+	display: block;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+	transition: 0s;
+	color: white;
+	text-decoration: none;
+    padding: 13px;
+	border-radius: 500px;
+}
+li.nav {
+	display: block;
+	float: right;
+}
+a.nav {
+	float: right;
+	display: block;
+	color: #5B5B5B;
+	text-decoration: none;
+    padding: 13px;
+	border-radius: 500px;
+	background-color: white;
+	transition: 0.2s;
+}
+li a.nav:hover {
+	background-color: #EFEFEF;
+	color: black;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+}
+#r-colour {
+}
+.stretch {
+	margin: -8px;
+}
+.container {
+	position: relative;
+	text-align: center;
+}
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+</style>
+</head>
+
+<body onload="return ran_col()">
+<script type="text/javascript">
+            function ran_col() {
+                var color = '#';
+                var letters = ['ff598f','fd8a5e','e0e300','01dddd'];
+                color += letters[Math.floor(Math.random() * letters.length)];
+                document.getElementById('r-colour').style.background = color;
+            }
+</script>
+<header>
+<div>
+	<img src="#" width="80" height="40">
+	<li class="nav"><a class="account" href="SignUp">Sign Up</a></li>
+	<hr class="grey" style="height: 30px; display: inline; float: right">
+	<li class="nav"><a class="account" href="Login">Login</a></li>
+	<hr class="grey" style="float: right; width: 98%">
+</div>
+<div style="height: 95px">
+	<li class="nav"><a class="active" href="/" id="r-colour">Home</a></li>
+	<li class="nav"><a class="nav" href="/Places/">Places</a></li>
+	<li class="nav"><a class="nav" href="/Food+Drink/">Food & Drink</a></li>
+	<li class="nav"><a class="nav" href="/About+Contact-Us/">About/Contact Us</a></li>
+	<hr class="grey" style="float: right; width: 98%">
+</div>
+</header>
+<div class="container stretch">
+	<img src="../../L02/Assets/Places/Go Ape/1.jpg" style="width: 100%; height: 375px; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19)">
+	<div class="centered"><h1>Welcome</h1><h3>"Welcome message goes here"</h3></div>
+</div>
+</body>
+</html>
