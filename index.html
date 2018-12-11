@@ -57,7 +57,7 @@ li a.nav:hover {
 	text-align: center;
 }
 .centered {
-	position: absolute;
+	position: relative;
 	left: 50%;
 	transform: translate(-50%);
 }
@@ -65,6 +65,7 @@ div.location {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
   text-align: left;
   padding: 10px;
+  width: 250px;
 }
 </style>
 </head>
@@ -81,9 +82,9 @@ div.location {
 <header>
 <div>
 	<img src="#" width="80" height="40">
-	<li class="nav"><a class="account" href="SignUp">Sign Up</a></li>
+	<li class="nav"><a class="account" href="/Account/Create">Sign Up</a></li>
 	<hr class="line" style="height: 30px; display: inline; float: right">
-	<li class="nav"><a class="account" href="Login">Login</a></li>
+	<li class="nav"><a class="account" href="/Account/Login/">Login</a></li>
 	<hr class="line" style="float: right; width: 98%">
 </div>
 <div style="height: 95px">
@@ -96,49 +97,31 @@ div.location {
 </header>
 <div class="container stretch" style="padding-bottom: 20px">
 	<img src="Assets/Go Ape/1.jpg" style="width: 100%; height: 375px; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19)">
-	<div class="centered" style="color: white; top: 50%;"><h1>Welcome</h1><h3>"Welcome message goes here"</h3></div>
+	<div class="centered" style="color: white; top: 50%; position: absolute"><h1>Welcome</h1><h3>"Welcome message goes here"</h3></div>
 </div>
 
 <!--Locations To Visit-->
 
-<h1 class="centered" style="top: 70%">Recommended for you</h1>
-<hr class="line centered" style="top: 77%; width: 400px">
-<div class="location" style="position: absolute; right: 8%; top: 82%">
+<h1 style="text-align: center">Recommended for you</h1>
+<hr class="line centered" style="width: 30%">
+<div class="location" style="position: absolute; right: 8%">
   <img src="Assets/Rush/1.jpg" alt="Place" style="width: 250px;">
   <div style="padding: 9px">
 	  <img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
   </div>
 </div>
-<div class="location"  style="position: absolute; left: 50%; transform: translate(-50%); top: 82%">
-  <img src="Assets/Rush/2.jpg" alt="Place" style="width: 250px;">
+<div class="location centered"  style="position: absolute">
+  <img src="Assets/Rush/2.jpg" alt="Place" style="width: 250px">
   <div style="padding: 9px">
 	  <img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
   </div>
 </div>
-<div class="location"  style="position: absolute; left: 8%; top: 82%">
+<div class="location"  style="position: absolute; left: 8%">
   <img src="Assets/Rush/3.jpeg" alt="Place" style="width: 250px;">
   <div style="padding: 9px">
 	  <img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
   </div>
 </div>
 
-<div class="location" style="position: absolute; right: 8%; top: 120%">
-  <img src="Assets/Rush/1.jpg" alt="Place" style="width: 250px;">
-  <div style="padding: 9px">
-	  <img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
-  </div>
-</div>
-<div class="location"  style="position: absolute; left: 50%; transform: translate(-50%); top: 120%">
-  <img src="Assets/Rush/2.jpg" alt="Place" style="width: 250px;">
-  <div style="padding: 9px">
-	  <img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
-  </div>
-</div>
-<div class="location"  style="position: absolute; left: 8%; top: 120%">
-  <img src="Assets/Rush/3.jpeg" alt="Place" style="width: 250px;">
-  <div style="padding: 9px">
-	  <img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
-  </div>
-</div>
 </body>
 </html>
