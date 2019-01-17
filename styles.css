@@ -69,9 +69,12 @@ a.account {
 	color: #5B5B5B;
 }
 div.nav {
+	z-index:99999;
+	background-color: white;
 	height: 50px;
 	padding: 8px;
-	margin-bottom: 8px
+	margin-bottom: 8px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*Big Image*/
