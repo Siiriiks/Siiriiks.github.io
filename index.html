@@ -1,20 +1,40 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Website - Home</title>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Bucks for the Young - Home</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> <!--Font Awesome-->
 <style>
-.r-img {
-	src: url();
-	color: blue;
-}
 /*Fonts*/
 @font-face {
-   font-family: SansationFont;
-   src: url(sansation_light.woff);
+	font-family: SansationFont;
+	src: url(Fonts/SansationLight.woff);
 }
 * {
-   font-family: SansationFont;
+	font-family: SansationFont;
+}
+
+/*Overlay*/
+#overlay { /* Credit for Overlay: https://www.w3schools.com/howto/howto_css_overlay.asp */
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0; 
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0);
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+#overlay-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 50px;
+	color: white;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
 }
 
 /*Global Elements*/
@@ -81,10 +101,15 @@ a.account {
 
 /*Boxes for Locations*/
 div.location {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-  text-align: left;
-  padding: 10px;
-  width: 250px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+	text-align: left;
+	padding: 10px;
+	width: 250px;
+	height: 300px;
+	transition: 0.15s;
+}
+div.location:hover {
+	box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.85), 0 6px 25px 0 rgba(0, 0, 0, 0.3);
 }
 img.
 </style>
@@ -101,14 +126,8 @@ img.
 </script>
 
 <!--Navigation Bar-->
-<div>
-	<img src="#" width="80" height="40">
-	<li class="nav"><a class="account" href="/Account/Create">Sign Up</a></li>
-	<hr class="line" style="height: 30px; display: inline; float: right">
-	<li class="nav"><a class="account" href="/Account/Login/">Login</a></li>
-	<hr class="line" style="float: right; width: 98%">
-</div>
-<div style="height: 95px">
+<div><img src="Assets/Logo.png" style="height: 40px; float: left"><a style="padding: 13px; float: left">Bucks for the Young</a><a href="/"/></div>
+<div style="height: 65px">
 	<li class="nav"><a class="active" href="/" id="r-colour">Home</a></li>
 	<li class="nav"><a class="nav" href="/Places/">Places</a></li>
 	<li class="nav"><a class="nav" href="/Food+Drink/">Food & Drink</a></li>
@@ -117,33 +136,196 @@ img.
 </div>
 
 <!--Big Image-->
-<div class="container stretch" style="padding-bottom: 20px">
-	<img src="Assets/Go Ape/1.jpg" style="width: 100%; height: 375px; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19)">
-	<div class="centered" style="color: white; top: 50%; transform: translate(-50%,-50%); position: absolute"><h1>Welcome</h1><h3>"Welcome message goes here"</h3></div>
+<div class="container stretch" style="padding-bottom: 40px; height: 375px">
+	<div style="background-color: black; width: 100%; height: 375px; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19)"/>
+	<img src="Assets/Go Ape/1.jpg" style="width: 100%; height: 375px; opacity: .75">
+	<div class="centered" style="position: absolute; color: white; top: 50%; transform: translate(-50%,-50%)">
+		<h1>Welcome</h1>
+		<div id="quote"></div>
+	  <script> //Script Credit: https://stackoverflow.com/a/17632657
+    (function() {
+      var quotes = [
+        {
+          text: "Welcome Message 1",
+		  img: "",
+        },
+        {
+          text: "Welcome Message 2",
+		  img: "",
+        },
+		{
+          text: "Welcome Message 3",
+		  img: "",
+        },
+		{
+          text: "Welcome Message 4",
+		  img: "",
+        },
+		{
+          text: "Welcome Message 5",
+		  img: "",
+        }
+      ];
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").innerHTML =
+        '<h3>' + quote.text + '</h3>';
+    })();
+  </script>
+	</div>
 </div>
 
 <!--Locations To Visit-->
 <div>
 	<h1 style="text-align: center">Recommended for you</h1>
-	<hr class="line centered" style="margin-bottom: 40px; width: 30%">
-	<div class="location" style="position: absolute; right: 8%">
-		<img src="Assets/Rush/1.jpg" alt="Place" style="width: 250px;">
-		<div style="padding: 9px">
-			<img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
-		</div>
-	</div>
-	<div class="location centered"  style="position: absolute">
-		<img src="Assets/Rush/2.jpg" alt="Place" style="width: 250px">
-		<div style="padding: 9px">
-			<img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
-		</div>
-	</div>
-	<div class="location"  style="position: absolute; left: 8%">
-		<img src="Assets/Rush/3.jpeg" alt="Place" style="width: 250px;">
-		<div style="padding: 9px">
-			<img src="Assets/L-Icon.png" style="height: 15px"><font color="grey">location</font>
-		</div>
-	</div>
+	<hr class="line" style="margin-bottom: 40px; width: 300px; position: relative; left: 50%; transform: translate(-50%);">
+	
+	<!--Boxes-->
+	
+	<li class="nav"><div id="suggested1" class="location" style="position: absolute; left: 8%">
+		<script> //Script Credit: https://stackoverflow.com/a/17632657
+    (function() {
+      var suggested1 = [
+        {
+		  name: "Aqua Parcs",
+		  img: "Aqua Parcs/1.jpg",
+          location: "V10 Brickhill St, Milton Keynes MK15 9HQ",
+		  page: "Places/Aqua Parcs",
+        },
+        {
+		  name: "Eden Center",
+          img: "Eden Center/1.jpg",
+          location: "Oxford Rd, High Wycombe HP11 2DQ",
+		  page: "Places/Eden Center",
+        },
+		{
+		  name: "Go Ape",
+          img: "Go Ape/3.jpg",
+          location: "Go Ape Black Park, Black Park Rd, Slough SL3 6DS",
+		  page: "Places/Go Ape",
+        },
+		{
+		  name: "Rush",
+          img: "Rush/1.jpg",
+          location: "Lexmark House, Cressex Business Park, Coronation Rd, High Wycombe HP12 3TZ",
+		  page: "Places/Rush",
+        },
+		{
+		  name: "XScape",
+          img: "XScape/1.jpg",
+          location: "602 Marlborough Gate, Milton Keynes MK9 3XS",
+		  page: "Places/XScape",
+        }
+      ];
+      var suggested1 = suggested1[Math.floor(Math.random() * suggested1.length)];
+      document.getElementById("suggested1").innerHTML =
+		'<div style="width: 250px; height: 175px; background-color: black"/>' +  //Black box behined image to darken it
+		'<img src="Assets/' + suggested1.img + '" alt="Place" style="width: 250px; height: 175px; opacity: .8">' +  //Image Shown
+		'<h4 style="position: absolute; top: 0%; left: 8%; color: white">' + suggested1.name + '</h4>' +  //Name of place
+		'<div style="padding: 9px">' +  //Open DIV for Information underneath
+		'<i class="fas fa-map-marker-alt"></i> <a>' + suggested1.location + '</a>' +  //Location
+		'</div>' +  //Close DIV
+		'<a href="' + suggested1.page + '" style="position: absolute; top: 0%; left: 0%; display: block; height: 100%; width: 100%"></a>';  //Make it Clickable
+    })();
+		</script>
+	</div></li>
+	
+	
+	<li class="nav"><div class="location" id="suggested2" style="position: absolute; left: 50%; transform: translate(-50%)">
+		<script> //Script Credit: https://stackoverflow.com/a/17632657
+    (function() {
+      var suggested2 = [
+        {
+		  name: "Aqua Parcs",
+		  img: "Aqua Parcs/1.jpg",
+          location: "V10 Brickhill St, Milton Keynes MK15 9HQ",
+		  page: "Places/Aqua Parcs",
+        },
+        {
+		  name: "Eden Center",
+          img: "Eden Center/1.jpg",
+          location: "Oxford Rd, High Wycombe HP11 2DQ",
+		  page: "Places/Eden Center",
+        },
+		{
+		  name: "Go Ape",
+          img: "Go Ape/3.jpg",
+          location: "Go Ape Black Park, Black Park Rd, Slough SL3 6DS",
+		  page: "Places/Go Ape",
+        },
+		{
+		  name: "Rush",
+          img: "Rush/1.jpg",
+          location: "Lexmark House, Cressex Business Park, Coronation Rd, High Wycombe HP12 3TZ",
+		  page: "Places/Rush",
+        },
+		{
+		  name: "XScape",
+          img: "XScape/1.jpg",
+          location: "602 Marlborough Gate, Milton Keynes MK9 3XS",
+		  page: "Places/XScape",
+        }
+      ];
+      var suggested2 = suggested2[Math.floor(Math.random() * suggested2.length)];
+      document.getElementById("suggested2").innerHTML =
+		'<div style="width: 250px; height: 175px; background-color: black"/>' +  //Black box behined image to darken it
+		'<img src="Assets/' + suggested2.img + '" alt="Place" style="width: 250px; height: 175px; opacity: .8">' +  //Image Shown
+		'<h4 style="position: absolute; top: 0%; left: 8%; color: white">' + suggested2.name + '</h4>' +  //Name of place
+		'<div style="padding: 9px">' +  //Open DIV for Information underneath
+		'<i class="fas fa-map-marker-alt"></i> <a>' + suggested2.location + '</a>' +  //Location
+		'</div>' +  //Close DIV
+		'<a href="' + suggested2.page + '" style="position: absolute; top: 0%; left: 0%; display: block; height: 100%; width: 100%"></a>';  //Make it Clickable
+    })();
+		</script>
+	</div></li>
+	
+	
+	<li class="nav"><div id="suggested3" class="location" style="position: absolute; right: 8%">
+		<script> //Script Credit: https://stackoverflow.com/a/17632657
+    (function() {
+      var suggested3 = [
+        {
+		  name: "Aqua Parcs",
+		  img: "Aqua Parcs/1.jpg",
+          location: "V10 Brickhill St, Milton Keynes MK15 9HQ",
+		  page: "Places/Aqua Parcs",
+        },
+        {
+		  name: "Eden Center",
+          img: "Eden Center/1.jpg",
+          location: "Oxford Rd, High Wycombe HP11 2DQ",
+		  page: "Places/Eden Center",
+        },
+		{
+		  name: "Go Ape",
+          img: "Go Ape/3.jpg",
+          location: "Go Ape Black Park, Black Park Rd, Slough SL3 6DS",
+		  page: "Places/Go Ape",
+        },
+		{
+		  name: "Rush",
+          img: "Rush/1.jpg",
+          location: "Lexmark House, Cressex Business Park, Coronation Rd, High Wycombe HP12 3TZ",
+		  page: "Places/Rush",
+        },
+		{
+		  name: "XScape",
+          img: "XScape/1.jpg",
+          location: "602 Marlborough Gate, Milton Keynes MK9 3XS",
+		  page: "Places/XScape",
+        }
+      ];
+      var suggested3 = suggested3[Math.floor(Math.random() * suggested3.length)];
+      document.getElementById("suggested3").innerHTML =
+		'<div style="width: 250px; height: 175px; background-color: black"/>' +  //Black box behined image to darken it
+		'<img src="Assets/' + suggested3.img + '" alt="Place" style="width: 250px; height: 175px; opacity: .8">' +  //Image Shown
+		'<h4 style="position: absolute; top: 0%; left: 8%; color: white">' + suggested3.name + '</h4>' +  //Name of place
+		'<div style="padding: 9px">' +  //Open DIV for Information underneath
+		'<i class="fas fa-map-marker-alt"></i> <a>' + suggested3.location + '</a>' +  //Location
+		'</div>' +  //Close DIV
+		'<a href="' + suggested3.page + '" style="position: absolute; top: 0%; left: 0%; display: block; height: 100%; width: 100%"></a>';  //Make it Clickable
+    })();
+		</script>
+	</div></li>
 </div>
 </body>
 </html>
