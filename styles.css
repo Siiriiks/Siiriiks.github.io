@@ -26,10 +26,11 @@ hr.line {
 	transform: translate(-50%);
 }
 .footer {
-	margin-top: 10px;
 	position: relative;
-	top: 110%;
+	bottom: 0%;
 	height: 60px;
+	width: 100%;
+	margin-top: 20px
 }
 
 /*Navigation Bar*/
