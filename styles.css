@@ -1,10 +1,24 @@
 /*Fonts*/
 @font-face {
-	font-family: SansationFont;
+	font-family: SansationLight;
 	src: url(/Fonts/SansationLight.woff);
 }
 * {
-	font-family: SansationFont;
+	font-family: SansationLight;
+}
+@font-face {
+	font-family: SansationRegular;
+	src: url(/Fonts/SansationRegular.woff);
+}
+.f-regular {
+	font-family: SansationRegular;
+}
+@font-face {
+	font-family: SansationBold;
+	src: url(/Fonts/SansationBold.woff);
+}
+.f-bold {
+	font-family: SansationBold;
 }
 
 /*Global Elements*/
@@ -25,6 +39,12 @@ hr.line {
 	left: 50%;
 	transform: translate(-50%);
 }
+.title {
+	text-align: center;
+	margin-top: 40px;
+	text-decoration: underline;
+	font-family: SansationRegular;
+}
 .footer {
 	position: relative;
 	bottom: 0%;
@@ -43,6 +63,7 @@ hr.line {
 	text-decoration: none;
     padding: 13px;
 	border-radius: 500px;
+	font-family: SansationRegular;
 }
 li.nav {
 	display: block;

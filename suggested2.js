@@ -36,7 +36,7 @@
 	document.getElementById("suggested2").innerHTML =
 		'<div style="width: 250px; height: 175px; background-color: black"/>' +  //Black box behined image to darken it
 		'<img src="Assets/' + suggested2.img + '" alt="Place" style="width: 250px; height: 175px; opacity: .8">' +  //Image Shown
-		'<h4 style="position: absolute; top: 0%; left: 8%; color: white">' + suggested2.name + '</h4>' +  //Name of place
+		'<h4 class="f-regular" style="position: absolute; top: 0%; left: 8%; color: white">' + suggested2.name + '</h4>' +  //Name of place
 		'<div style="padding: 9px">' +  //Open DIV for Information underneath
 		'<i class="fas fa-map-marker-alt" id="r-colour3"></i> <a>' + suggested2.location + '</a>' +  //Location
 		'</div>' +  //Close DIV
