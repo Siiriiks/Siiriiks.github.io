@@ -38,7 +38,7 @@
 		'<img src="Assets/' + suggested1.img + '" alt="Place" style="width: 250px; height: 175px; opacity: .8">' +  //Image Shown
 		'<h4 class="f-regular" style="position: absolute; top: 0%; left: 8%; color: white">' + suggested1.name + '</h4>' +  //Name of place
 		'<div style="padding: 9px">' +  //Open DIV for Information underneath
-		'<i class="fas fa-map-marker-alt" id="r-colour2"></i> <a>' + suggested1.location + '</a>' +  //Location
+		'<i class="fas fa-map-marker-alt" id="r-colour"></i> <a>' + suggested1.location + '</a>' +  //Location
 		'</div>' +  //Close DIV
 		'<a href="' + suggested1.page + '" style="position: absolute; top: 0%; left: 0%; display: block; height: 100%; width: 100%"></a>';  //Make it Clickable
 })();
