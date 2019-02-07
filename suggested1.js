@@ -15,7 +15,7 @@
         },
 		{
 			name: "Go Ape",
-			img: "Go Ape/3.jpg",
+			img: "Black Park/Go Ape/3.jpg",
 			location: "Go Ape Black Park, Black Park Rd, Slough SL3 6DS",
 			page: "Places/Go Ape",
         },
