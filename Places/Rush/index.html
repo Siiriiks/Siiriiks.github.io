@@ -19,8 +19,129 @@
 	<li class="nav"><a class="nav" href="/AboutUs/">About/Contact Us</a></li>
 </div>
 
-<!--Content-->
-<h1>Page Currently Missing</h1>
+<div style="float: left; margin-right: 20px; margin-bottom: 20px">
+<div class="slideshow" style="width: 600px"> <!---->
+	<div class="mySlides">
+		<div class="numbertext">1 / 6</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/Rush/1.jpg" class="slide-img" style="width:100%">
+		</div>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">2 / 6</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/Rush/2.jpg" class="slide-img" style="width:100%">
+		</div>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">3 / 6</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/Rush/3.jpeg" class="slide-img" style="width:103%">
+		</div>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">4 / 6</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/Rush/4.jpg" class="slide-img" style="width:100%">
+		</div>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">5 / 6</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/Rush/5.jpg" class="slide-img" style="width:100%">
+		</div>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">6 / 6</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/Rush/6.jpg" class="slide-img" style="width:100%">
+		</div>
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">❮</a>
+	<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div style="height: 330px;">
+	<h1 style="margin-top: 5px; margin-bottom: 10px; text-decoration: underline">Rush</h1>
+	<p class="f-regular">
+		Rush High Wycombe is an adrenaline-fuelled indoor trampoline park for bouncers of all ages. With our huge spring-loaded indoor playground, and range of exciting activities we can help get your blood pumping and heart racing. Whether you’re a first time trampoliner or an experienced bouncer, a toddler, a teen or anything in between, we're a busy mainstream leisure centre offering kids parties, special needs sessions, events and more. Customers are required to watch our short safety video before bouncing and all jumpers must fill in a waiver prior to bouncing (you can do this online via our website in advance). Pre-booking is recommended, walk-in charges apply.
+	</p>
+</div>
+<div style="margin-top: 0px; margin-bottom: 10px; color: darkgray">
+	<i class="far fa-copyright"></i>
+	<a> Trip Advisor</a>
+</div>
+<div>
+<div style="float: left; margin-right: 25px;">
+	<div style="position: relative; height: 260px; width: 600px">
+		
+		<div style="float: left; margin-left: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3); width: 250px; height: 250px">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.2721699055955!2d-0.7809461843842896!3d51.61822331041537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48768a6b4821f007%3A0xd468a3b06049ef2a!2sLexmark+House%2C+High+Wycombe!5e0!3m2!1sen!2suk!4v1551883839158" width="250" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+		<div style="float: left; margin-left: 30px; margin-right: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3); width: 250px; height: 250px">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.300367701926!2d-1.9228141843564224!3d52.419355051435666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870be89387cb2f5%3A0x3d187dff0b37d5b3!2sLifford+Ln%2C+Birmingham+B30+3DZ!5e0!3m2!1sen!2suk!4v1551883585549" width="250" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div style="margin-top: 10px">
+		<i class="fas fa-map-marker-alt" id="r-colour"></i> 
+		<a>Lexmark House, Cressex Business Park, Coronation Rd, High Wycombe HP12 3TZ</a>
+	</div>
+	<div style="margin-top: 10px">
+		<i class="fas fa-map-marker-alt" id="r-colour2"></i> 
+		<a>Lifford Ln, Birmingham B30 3DZ</a>
+	</div>
+</div>
+
+<div style="height: 120px">
+	<h3 style="text-decoration: underline">Opening Times - High Wycombe</h3>
+	<a class="f-regular">Monday - Thursday: </a><a>10:30AM - 8PM</a>
+	<br>
+	<a class="f-regular">Friday: </a><a>10:30AM - 9PM</a>
+	<br>
+	<a class="f-regular">Saturday: </a><a>9AM - 9PM</a>
+	<br>
+	<a class="f-regular">Sunday: </a><a>9AM - 7PM</a>
+</div>
+	
+<div style="height: 200px">
+	<h3 style="text-decoration: underline">Opening Times - Birmingham</h3>
+	<a class="f-regular">Monday - Thursday: </a><a>10:30AM - 9PM</a>
+	<br>
+	<a class="f-regular">Friday: </a><a>10:30AM - 10PM</a>
+	<br>
+	<a class="f-regular">Saturday: </a><a>9AM - 10PM</a>
+	<br>
+	<a class="f-regular">Sunday: </a><a>9AM - 9PM</a>
+</div>
+</div>
 
 <div class="stretch footer" id="r-colour1-b">
 	<div style="padding: 10px"><img src="/Assets/Logo.png" style="height: 40px; float: left"><a class="f-regular" style="padding: 13px; float: left">Bucks for the Young</a><a href="/"/></div>
