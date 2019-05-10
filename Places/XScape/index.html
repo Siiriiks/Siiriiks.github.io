@@ -19,8 +19,92 @@
 	<li class="nav"><a class="nav" href="/AboutUs/">About/Contact Us</a></li>
 </div>
 
-<!--Content-->
-<h1>Page Currently Missing</h1>
+
+<div class="slideshow" style="float: left; margin-right: 20px; margin-bottom: 20px"> <!---->
+	<div class="mySlides">
+		<div class="numbertext">1 / 4</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/XScape/1.jpg" class="slide-img" style="width:104%;">
+		</div>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">2 / 4</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/XScape/2.jpg" class="slide-img" style="width:117%">
+		</div>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">3 / 4</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/XScape/3.jpg" class="slide-img" style="width:100%">
+		</div>
+	</div>
+	<div class="mySlides">
+		<div class="numbertext">4 / 4</div>
+		<div class="slide-imgcontainer">
+			<img src="/Assets/XScape/4.jpg" class="slide-img" style="width:117%">
+		</div>
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">❮</a>
+	<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div style="height: 350px;">
+	<h1 style="margin-top: 5px; margin-bottom: 10px; text-decoration: underline">XScape</h1>
+	<p class="f-regular">
+		This sports and entertainment complex features indoor snow slopes, climbing walls, bowling lanes, a multi-screen cinema and a variety of interactive games.
+	</p>
+</div>
+<div style="margin-top: 0px; margin-bottom: 10px; color: darkgray">
+	<i class="far fa-copyright"></i>
+	<a> Trip Advisor</a>
+</div>
+<div>
+<div style="float: left; margin-right: 25px; width: 600px">
+	<div style="position: relative; height: 260px; width: 600px">
+		<div style="float: left; margin-left: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3); width: 250px; height: 250px">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d315414.9813924427!2d-1.0606091374632154!3d51.857678197137375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d51.6713246!2d-0.6049894!4m5!1s0x4877aa956b7d8935%3A0x7c6674f9ed3d70e5!2sxscape+milton+keynes!3m2!1d52.041506!2d-0.7484759999999999!5e0!3m2!1sen!2suk!4v1556813894690!5m2!1sen!2suk" width="250" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	</div>
+	<div style="margin-top: 10px">
+		<i class="fas fa-map-marker-alt" id="r-colour"></i> 
+		<a>602 Marlborough Gate, Milton Keynes MK9 3XS</a>
+	</div>
+</div>
+
+<div style="height: 300px">
+	<h3 style="text-decoration: underline">Opening Times - Black Park</h3>
+	<a class="f-regular">Everyday: </a><a>6:30AM - 11:30PM</a>
+</div>
+</div>
 
 <div class="stretch footer" id="r-colour1-b">
 	<div style="padding: 10px"><img src="/Assets/Logo.png" style="height: 40px; float: left"><a class="f-regular" style="padding: 13px; float: left">Bucks for the Young</a><a href="/"/></div>

@@ -2,27 +2,33 @@
 (function() {
 	var quotes = [
         {
-			text: "Welcome Message 1",
+			big: "Bonjour",
+			text: "Ça va?",
 			img: "",
         },
         {
-			text: "Welcome Message 2",
+			big: "Hola",
+			text: "como estas?",
 			img: "",
         },
 		{
-			text: "Welcome Message 3",
+			big: "Hello",
+			text: "how are you?",
 			img: "",
         },
 		{
-			text: "Welcome Message 4",
+			big: "Hallo",
+			text: "ist das ok?",
 			img: "",
         },
 		{
-			text: "Welcome Message 5",
+			big: "Hej",
+			text: "är det ok?",
 			img: "",
         }
       ];
 	var quote = quotes[Math.floor(Math.random() * quotes.length)];
-	document.getElementById("quote").innerHTML =
+	document.getElementById("welcome").innerHTML =
+		'<h1 class="f-bold">' + quote.big + '</h1>' +
 		'<h3>' + quote.text + '</h3>';
 })();
